@@ -1,0 +1,479 @@
+/* --- AUTH SCREEN --- */
+.auth-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  display: flex;
+  background: white;
+  width: 850px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.side-graphic {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    /* Horizontal Center */
+  justify-content: center; /* Vertical Center */
+  background-color: #ffffff;
+  border-right: 1px solid #f0f0f0;
+}
+
+.graphic-circle {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px; /* Pulls text closer to logo */
+}
+
+.graphic-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #333;
+  text-transform: uppercase;
+}
+.graphic-circle img {
+  width: 100%;
+  object-fit: contain;        
+}
+
+
+
+.side-form {
+  flex: 1;
+  padding: 50px;
+  text-align: left;
+}
+
+.auth-nav {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.auth-nav span {
+  padding-bottom: 8px;
+  cursor: pointer;
+  color: #999;
+  font-weight: bold;
+}
+
+.auth-nav .active {
+  color: #800000;
+  border-bottom: 2px solid #800000;
+}
+
+.form-fields label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-fields input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.maroon-btn {
+  width: 100%;
+  padding: 12px;
+  background: #800000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* --- DASHBOARD SCREEN --- */
+.dashboard-view {
+  display: block;      /* Add this: Ensures it behaves as a full-width block */
+  width: 100vw;        /* Add this: Forces it to fill the entire browser width */
+  min-height: 100vh;
+  background-color: #f4f7fe;
+  margin: 0;           /* Optional: ensures no accidental spacing */
+  padding: 0;          /* Optional: ensures no accidental spacing */
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 8%;
+  background: white;
+  align-items: center;
+}
+
+.brand-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logout-pill {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.blue-hero {
+  background: #4a77ff;
+  color: white;
+  padding: 40px 0 100px;
+  text-align: center;
+}
+
+.card-container {
+  width: 90%;
+  max-width: 950px;
+  background: white;
+  margin: -60px auto 40px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.sub-header {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.type-grid {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.type-card {
+  flex: 1;
+  border: 2px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.active-length {
+  border: 2px solid #4ade80;
+  color: #4ade80;
+}
+
+.action-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #eee;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #888;
+  font-weight: bold;
+}
+
+.toggle-btn.selected {
+  background: #4a77ff;
+  color: white;
+  border: none;
+}
+
+.input-row {
+  display: flex;
+  gap: 30px;
+}
+
+.field-group {
+  flex: 1;
+  text-align: left;
+}
+
+.input-with-select {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.input-with-select input {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.input-with-select select {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background: #fafafa;
+}
+
+/* --- UPDATED INPUT ROW FOR ARITHMETIC --- */
+
+/* Ensures the layout adjusts when the operator dropdown appears */
+.input-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end; /* Aligns inputs and the operator dropdown at the bottom */
+  margin-bottom: 30px;
+}
+
+/* New: Styling for the Operator Column */
+.operator-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 8px; /* Aligns with the input boxes */
+}
+
+.operator-group label {
+  font-size: 11px;
+  font-weight: bold;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.op-select {
+  height: 50px;
+  width: 60px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a77ff;
+  cursor: pointer;
+  outline: none;
+}
+
+/* --- CALCULATE BUTTON --- */
+
+.calculate-btn {
+  width: 100%;
+  padding: 15px;
+  background: #4a77ff; /* Matches your Blue Hero color */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.calculate-btn:hover {
+  background: #365fdb;
+}
+
+/* --- TYPE CARD ACTIVE STATES --- */
+
+/* You had .active-length; let's make a generic active state for all types */
+.type-card.active {
+  border: 2px solid #4ade80;
+  background-color: rgba(74, 222, 128, 0.05);
+}
+
+.type-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* --- AUTH NAV FIX --- */
+.auth-nav span {
+  transition: all 0.3s ease;
+}
+
+/* --- FIX CONGESTION --- */
+
+.input-row {
+  display: flex;
+  gap: 15px;            /* Tighten gap slightly to allow more internal space */
+  align-items: flex-end; /* Aligns all elements to the bottom of the row */
+  justify-content: center;
+  width: 100%;
+}
+
+.operator-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;      /* IMPORTANT: Forces the side boxes to stay away */
+  padding-bottom: 25px; /* Adjust this to center the circle between inputs */
+}
+
+.op-dropdown {
+  appearance: none;
+  background-color: #f0f4ff;
+  border: 1px solid #dce4ff;
+  color: #4a77ff;
+  width: 50px;          /* Slightly larger for better clickability */
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 22px;      /* Larger font for symbols */
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(74, 119, 255, 0.15);
+  z-index: 10;          /* Ensures it stays on top */
+}
+
+/* Ensure the Value fields don't grow too much and squash the middle */
+.field-group {
+  flex: 1;              /* Allows both fields to be equal width */
+  min-width: 0;         /* Prevents flex-children from overflowing */
+}
+
+/* --- IMPROVED VISIBILITY FOR INPUT BOXES --- */
+
+.input-with-select {
+  /* Darkened border from #eee to #bbb */
+  border: 1.5px solid #bbb; 
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+  background: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a focus effect so the user knows exactly which box is active */
+.input-with-select:focus-within {
+  border-color: #4a77ff;
+  box-shadow: 0 0 0 3px rgba(74, 119, 255, 0.1);
+}
+
+.input-with-select input {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  /* Darkened text color for better contrast */
+  color: #333; 
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+}
+
+/* Optional: Add a subtle inner shadow to make the box look "inset" */
+.input-with-select input::placeholder {
+  color: #888;
+}
+
+/* Darken the dropdown part slightly to match */
+.input-with-select select {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background: #f0f0f0; /* Darkened from #fafafa */
+  border-top: 1.5px solid #bbb;
+  cursor: pointer;
+  color: #444;
+  font-weight: 500;
+}
+
+.history-page-container {
+  max-width: 1000px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.table thead th {
+  background-color: #4a90e2; /* Matches your blue theme */
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.table tbody tr:hover {
+  background-color: #f8faff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Centering and Width for History */
+.history-card {
+  max-width: 950px; /* Limits width so it doesn't look stretched */
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Table Spacing */
+.table-custom thead th {
+  background-color: #f8f9fa;
+  padding: 18px 12px; /* Vertical and horizontal spacing */
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+  color: #495057;
+}
+
+.table-custom tbody td {
+  padding: 20px 12px; /* Adds the "more spacing" you need between rows */
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Hover effect to make it feel interactive */
+.table-custom tbody tr:hover {
+  background-color: #fcfdff;
+}
+
+/* Badge styling for better look */
+.badge {
+  padding: 8px 12px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.btn-outline-danger {
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+}
